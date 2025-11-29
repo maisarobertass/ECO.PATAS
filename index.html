@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet's SLZ - Ajude a encontrar ou acolher um animal de rua</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Anton&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Pet's SLZ</a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#cadastrar-animal">Cadastrar Animal</a></li>
+            <li><a href="#animais-recentes">Animais Encontrados</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="login.html" class="btn-login">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Ajude a encontrar ou acolher um animal de rua</h1>
+          <p>
+            Nosso site conecta pessoas que encontram animais abandonados com
+            quem pode ajudar ou adotar.
+          </p>
+          <a href="#animais-recentes" class="btn btn-primary"
+            >Ver animais disponíveis</a
+          >
+        </div>
+      </section>
+
+      <section class="como-funciona">
+        <div class="container">
+          <h2>Como funciona</h2>
+          <div class="passos-container">
+            <div class="passo-card">
+              <div class="passo-numero">1</div>
+              <h3>Encontrou um animal?</h3>
+              <p>
+                Viu um animal em situação de rua? Cadastre-o gratuitamente aqui.
+              </p>
+            </div>
+            <div class="passo-card">
+              <div class="passo-numero">2</div>
+              <h3>Divulgação Imediata</h3>
+              <p>
+                O anúncio fica disponível para pessoas próximas e ONGs
+                parceiras.
+              </p>
+            </div>
+            <div class="passo-card">
+              <div class="passo-numero">3</div>
+              <h3>Conecte-se e Ajude</h3>
+              <p>
+                Quem puder ajudar entra em contato direto ou solicita a adoção.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="animais-recentes" class="animais-recentes">
+        <div class="container">
+          <h2>Animais recentes</h2>
+
+          <div class="animais-grid">
+            <div class="animal-card">
+              <div class="animal-card-imagem">
+                <div class="imagem-placeholder">
+                  <p>Foto do animal</p>
+                </div>
+              </div>
+              <div class="animal-card-conteudo">
+                <h3>Cachorro no centro</h3>
+                <p class="animal-local">
+                  <small>Visto próximo à praça Deodoro.</small>
+                </p>
+                <p class="animal-descricao">
+                  Parece dócil e assustado. Porte médio.
+                </p>
+                <a href="#" class="btn btn-card">Ver mais detalhes</a>
+              </div>
+            </div>
+
+            <div class="animal-card">
+              <div class="animal-card-imagem">
+                <div class="imagem-placeholder">
+                  <p>Foto do animal</p>
+                </div>
+              </div>
+              <div class="animal-card-conteudo">
+                <h3>Gato no bairro São Francisco</h3>
+                <p class="animal-local">
+                  <small>Gato abandonado no bairro São Francisco.</small>
+                </p>
+                <p class="animal-descricao">
+                  Pequeno, pelagem cinza. Provavelmente doméstico.
+                </p>
+                <a href="#" class="btn btn-card">Ver mais detalhes</a>
+              </div>
+            </div>
+
+            <div class="animal-card">
+              <div class="animal-card-imagem">
+                <div class="imagem-placeholder">
+                  <p>Foto do animal</p>
+                </div>
+              </div>
+              <div class="animal-card-conteudo">
+                <h3>Filhotes na Cohab</h3>
+                <p class="animal-local">
+                  <small>Encontrados perto do terminal.</small>
+                </p>
+                <p class="animal-descricao">
+                  Ninhada com 3 filhotes, precisam de resgate urgente.
+                </p>
+                <a href="#" class="btn btn-card">Ver mais detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cadastrar-animal" class="cadastrar-animal">
+        <div class="container">
+          <div class="form-container">
+            <h2>Cadastrar Animal Encontrado</h2>
+            <p>
+              Preencha as informações abaixo para registrar um animal
+              encontrado.
+            </p>
+
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="nome-animal">Nome do animal (ou apelido)</label>
+                <input
+                  type="text"
+                  id="nome-animal"
+                  name="nome-animal"
+                  placeholder="Ex: Gato, Cachorro, 'Peludo'"
+                />
+              </div>
+
+              <div class="form-group-grid">
+                <div class="form-group">
+                  <label for="tipo-animal">Tipo</label>
+                  <select id="tipo-animal" name="tipo-animal">
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="local-visto">Local onde foi visto</label>
+                  <input
+                    type="text"
+                    id="local-visto"
+                    name="local-visto"
+                    placeholder="Ex: Bairro São Francisco"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="descricao-animal">Descrição</label>
+                <textarea
+                  id="descricao-animal"
+                  name="descricao-animal"
+                  rows="5"
+                  placeholder="Descreva cor, porte, comportamento, etc."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="foto-animal">Enviar foto</label>
+                <input
+                  type="file"
+                  id="foto-animal"
+                  name="foto-animal"
+                  class="input-file"
+                />
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-full">
+                  Enviar Cadastro
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="sobre-projeto">
+        <div class="container">
+          <h2>Sobre o Projeto</h2>
+          <p>
+            O Pet's SLZ é uma iniciativa voluntária focada em ajudar animais em
+            situação de rua na cidade de São Luís. Nosso objetivo é conectar
+            pessoas dispostas a acolher, adotar ou auxiliar no resgate desses
+            animais.
+          </p>
+          <p>
+            Não somos uma ONG, mas sim uma plataforma que facilita a comunicação
+            entre quem encontra um animal e quem pode oferecer ajuda.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato" class="fale-conosco">
+        <div class="container">
+          <div class="form-container">
+            <h2>Fale Conosco</h2>
+            <p>
+              Tem alguma dúvida, sugestão ou quer ajudar? Envie uma mensagem!
+            </p>
+
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="nome-contato">Seu nome</label>
+                <input
+                  type="text"
+                  id="nome-contato"
+                  name="nome-contato"
+                  placeholder="Digite seu nome completo"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email-contato">Seu email</label>
+                <input
+                  type="email"
+                  id="email-contato"
+                  name="email-contato"
+                  placeholder="seu.email@exemplo.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem-contato">Mensagem</label>
+                <textarea
+                  id="mensagem-contato"
+                  name="mensagem-contato"
+                  rows="5"
+                  placeholder="Escreva sua mensagem aqui..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-full">
+                  Enviar Mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Pet's SLZ. Projeto de apoio a animais em situação de rua.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

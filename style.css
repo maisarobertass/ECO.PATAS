@@ -1,0 +1,561 @@
+/* Importação das fontes - Montserrat e Anton */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Anton&display=swap');
+
+/* Variáveis de cores (baseadas nas suas referências) */
+:root {
+  --color-dark-green: #283618; /* Verde escuro (Kombu Green / Dark Green) */
+  --color-moss-green: #889063; /* Verde musgo */
+  --color-tan: #cfbb99; /* Bege claro (Tan) */
+  --color-bone: #e5d7c4; /* Quase branco (Bone) */
+  --color-brown-dark: #4c3d19; /* Marrom escuro (Café Noir) */
+  --color-light-gray: #fbfbfb; /* Um cinza bem claro para o fundo, parecido com o white da paleta */
+
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Anton', sans-serif; /* Para títulos maiores se quiser um impacto */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  background-color: var(--color-light-gray); /* Fundo geral claro */
+  color: var(--color-dark-green); /* Cor padrão do texto */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--color-dark-green);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 30px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: var(--color-tan); /* Um destaque suave ao passar o mouse */
+}
+
+.btn-login {
+  background-color: var(--color-tan);
+  color: var(
+    --color-dark-green
+  ) !important; /* !important para sobrescrever o color do li a */
+  padding: 8px 15px;
+  border-radius: 20px; /* Bordas arredondadas para os botões */
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--color-bone);
+}
+
+/* Footer */
+.main-footer {
+  background-color: var(--color-dark-green);
+  color: var(--color-bone);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 4rem; /* Um espaço para o conteúdo principal */
+  font-size: 0.9rem;
+}
+
+/*
+===============================
+Estilos do Conteúdo Principal (Main)
+===============================
+*/
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px; /* Bordas arredondadas */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-moss-green); /* Verde musgo */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-green); /* Verde mais escuro no hover */
+}
+
+/* Seção Hero */
+.hero {
+  background-color: var(--color-bone); /* Fundo bege claro (Bone) */
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-family: var(--font-secondary); /* Fonte 'Anton' para impacto */
+  font-size: 3rem;
+  color: var(--color-dark-green);
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-brown-dark);
+  margin-bottom: 2rem;
+}
+
+/* Seção Como Funciona */
+.como-funciona {
+  padding: 4rem 0;
+  background-color: #fff; /* Fundo branco para contrastar com o hero */
+}
+
+.como-funciona h2 {
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-dark-green);
+}
+
+.passos-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Espaço entre os cards */
+}
+
+.passo-card {
+  flex-basis: 31%; /* Divide o espaço em 3 colunas */
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-bone);
+  padding: 2.5rem 2rem;
+  border-radius: 20px; /* Bordas arredondadas (inspiração "Scout") */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+.passo-card .passo-numero {
+  display: inline-block;
+  background-color: var(--color-tan); /* Cor Tan */
+  color: var(--color-dark-green);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50%; /* Círculo perfeito */
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* Alinha o número no centro do círculo */
+  margin-bottom: 1.5rem;
+}
+
+.passo-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-green);
+}
+
+.passo-card p {
+  font-size: 0.95rem;
+  color: var(--color-brown-dark);
+}
+
+/* Seção Animais Recentes (Placeholder) */
+.animais-recentes {
+  padding: 4rem 0;
+  background-color: var(--color-bone); /* Alterna a cor do fundo */
+}
+
+.animais-recentes h2 {
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-dark-green);
+}
+
+/*
+===============================
+Estilos dos Cards de Animais
+===============================
+*/
+
+.animais-grid {
+  display: grid;
+  /* Cria 3 colunas de tamanho igual */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* Espaçamento entre os cards */
+}
+
+.animal-card {
+  background-color: #fff; /* Fundo branco para o card */
+  border-radius: 20px; /* Bordas arredondadas (Estilo "Scout") */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Sombra suave */
+  overflow: hidden; /* Garante que a imagem não vaze das bordas */
+  display: flex;
+  flex-direction: column; /* Organiza o card verticalmente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px); /* Efeito de "levantar" */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card-imagem {
+  width: 100%;
+  height: 220px; /* Altura fixa para a imagem */
+  background-color: var(--color-light-gray); /* Cor do placeholder */
+}
+
+/* Placeholder (REMOVER QUANDO TIVER IMAGENS) */
+.imagem-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-moss-green);
+  font-weight: 600;
+}
+/* Quando tiver a imagem real, use isso:
+.animal-card-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+*/
+
+.animal-card-conteudo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz o conteúdo crescer para preencher o espaço */
+}
+
+.animal-card-conteudo h3 {
+  font-size: 1.4rem;
+  color: var(--color-dark-green);
+  margin-bottom: 0.25rem;
+}
+
+.animal-card-conteudo .animal-local {
+  color: var(--color-brown-dark);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.animal-card-conteudo .animal-descricao {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Empurra o botão para baixo */
+}
+
+/* Botão específico do card */
+.btn-card {
+  background-color: var(--color-dark-green);
+  color: #fff;
+  text-align: center;
+}
+
+.btn-card:hover {
+  background-color: var(--color-moss-green);
+}
+
+/* Media Query para telas menores (Tablets/Celulares) */
+@media (max-width: 992px) {
+  .animais-grid {
+    /* 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .passos-container {
+    flex-direction: column; /* Empilha os passos */
+  }
+
+  .animais-grid {
+    /* 1 coluna */
+    grid-template-columns: 1fr;
+  }
+
+  .main-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap; /* Permite que o menu quebre a linha */
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/*
+===============================
+Estilos do Formulário de Cadastro
+===============================
+*/
+
+.cadastrar-animal {
+  padding: 4rem 0;
+  background-color: #fff; /* Fundo branco para esta seção */
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o formulário */
+  padding: 3rem;
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-bone);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-green);
+}
+
+.form-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-brown-dark);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-green);
+}
+
+/* Estilo unificado para inputs, selects e textareas */
+input[type='text'],
+input[type='email'],
+input[type='password'], /* <<< ADICIONADO AQUI */
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  border: 1px solid var(--color-tan);
+  border-radius: 12px; /* Bordas arredondadas */
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Foco mais suave */
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus, /* <<< ADICIONADO AQUI */
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-moss-green);
+  box-shadow: 0 0 0 3px rgba(136, 144, 99, 0.2); /* Sombra suave verde */
+}
+
+/* Placeholder */
+::placeholder {
+  color: #aaa;
+}
+
+/* Grid para campos lado a lado */
+.form-group-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Botão de submit */
+.btn-full {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+/* Input de arquivo customizado (básico) */
+.input-file {
+  border: 1px solid var(--color-tan);
+  border-radius: 12px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.input-file:hover {
+  border-color: var(--color-moss-green);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .form-group-grid {
+    grid-template-columns: 1fr; /* Empilha os campos */
+  }
+
+  .form-container {
+    padding: 2rem;
+  }
+}
+
+/*
+===============================
+Estilos da Seção Sobre
+===============================
+*/
+
+.sobre-projeto {
+  padding: 4rem 0;
+  background-color: var(--color-bone); /* Alterna a cor de fundo */
+  text-align: center;
+}
+
+.sobre-projeto h2 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-dark-green);
+}
+
+.sobre-projeto p {
+  font-size: 1.1rem;
+  color: var(--color-brown-dark);
+  max-width: 800px; /* Limita a largura do texto */
+  margin: 0 auto 1rem auto; /* Centraliza e adiciona espaço */
+  line-height: 1.8;
+}
+
+/*
+===============================
+Estilos da Seção Fale Conosco
+===============================
+*/
+
+.fale-conosco {
+  padding: 4rem 0;
+  background-color: #fff; /* Fundo branco */
+}
+
+/* NENHUM CSS NOVO é necessário para o formulário
+   pois ele reutiliza .form-container, .form-group, etc.
+   que já foram definidos!
+*/
+
+/*
+===============================
+Estilos da Página de Login
+===============================
+*/
+
+.body-login {
+  /* Centraliza o card de login na tela inteira */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Altura total da tela */
+  background-color: var(--color-bone); /* Fundo bege */
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px; /* Largura do card de login */
+  padding: 20px;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.login-logo a {
+  color: var(--color-dark-green);
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-links a {
+  color: var(--color-moss-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+  color: var(--color-dark-green);
+}
+
+/* Ajuste para o .form-container no login */
+.body-login .form-container {
+  padding: 2rem 2.5rem; /* Um pouco mais de padding */
+  background-color: #fff; /* Fundo branco para o card */
+}
+
+/* Remove a margem do h2 no form de login */
+.body-login .form-container h2 {
+  margin-bottom: 0.5rem;
+}
